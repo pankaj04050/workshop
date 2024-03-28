@@ -1,0 +1,272 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-1);
+}
+
+:root{
+  --font-1:  'Verdana', Geneva, Tahoma, sans-serif;
+  --font-2: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background: rgb(61, 61, 61); /*inherit */
+}
+
+header {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  background: #292929;
+  color: whitesmoke;
+  font-family: var(--font-1)
+}
+
+main{
+  width: 99%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+}
+
+.profile-card{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: gray;
+  padding: 0 0px 10px 0px;
+}
+
+.profile-card img{
+  width: 100%;
+  height: 70%;
+  border-bottom-left-radius: 1%;
+  border-bottom-right-radius: 45%;
+}
+
+.profile-card h2{
+  margin: 20px;
+}
+
+samp{
+  color: #fff;
+}
+
+.details-card{
+  width: 80%;
+  height: 350px;
+  background: gray;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.details-card h1{
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.sub-section{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.sub-section .left-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.left-sec .bar{
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bar div{
+  width: 100%;
+  height: 4px;
+  background: black;
+  transition: all .5s ease;
+}
+
+.bar .line-2{
+  transition: none;
+}
+
+.left-sec .buttons{
+  display: none;
+  flex-direction: column;
+  border-radius: 1rem;
+
+}
+
+.left-sec .buttons p{
+  background: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: var(--font-1);
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.left-sec .buttons p:hover{
+  opacity: 0.7;
+}
+
+.right-sec{
+  width: 80%;
+  background: rgb(92, 89, 89);
+  margin-left: 10px;
+
+}
+
+.right-sec p{
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: var(--font-2);
+}
+
+footer{
+  width: 100%;
+  height: fit-content;
+  background: #d3d2d2;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+footer .content{
+  padding: 10px;
+}
+
+footer h2{
+  text-align: center;
+  background: #292929;
+  padding: 5px;
+  color: whitesmoke;
+}
+
+footer form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10px;
+}
+
+footer form label{
+  padding: 10px 0;
+}
+
+footer form input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 25px;
+  border-radius: .3rem;
+  padding: 5px 10px;
+}
+
+footer form textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 111px;
+  border-radius: .3rem;
+  resize: none;
+  padding: 5px 10px;
+}
+
+footer form .btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer form .btn button{
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: #292929;
+  color: white;
+  border-radius: .3rem;
+}
+
+footer .copyright{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-top: 1px solid gray;
+}
+
+
+
+@media screen and (max-width:700px) {
+  main{
+    flex-direction: column;
+  }
+
+  main .profile-card {
+    width: fit-content;
+  }
+
+  main .details-card{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+  }
+
+  main .details-card .sub-section{
+    flex-direction: column;
+
+  }
+
+  .details-card .left-sec .buttons{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details-card .left-sec .buttons p{
+    border-right: 1px solid gray;
+  }
+
+  .details-card .right-sec{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  footer{
+    margin-top: 10px;
+  }
+
+  .copyright{
+    flex-wrap: wrap;
+  }
+
+}
